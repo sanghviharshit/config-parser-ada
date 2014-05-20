@@ -1,0 +1,3 @@
+GLOBAL:
+HOST foo.bar.com:
+    S::myvariable:/etc/myfriend

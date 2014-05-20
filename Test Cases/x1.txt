@@ -1,0 +1,27 @@
+GLOBAL:
+    I::port:80
+    I::num_threads:4
+    S::ssl_key:/etc/mycreds.pem
+    S::protocol:TCP
+    F::max_bandwidth:10.0
+    I:O:port:8080
+HOST www.example.com:
+    S::ssl:yes
+    S::name:harshit_pc-10/server_v0.10
+    S::alternate_server:/harct10.0_
+    F::version:3.0
+    I::temperature:-10
+    S:O:ssl:no
+    S::_http_root:/home/example/
+HOST _00harshit-pc_01:
+    Q::qstring1:"""This is 1 escaped sequence using \ for """"
+    Q::qstring2:"""This is another string with 
+ NL and  CR."""
+    Q::qstring3:"""This is one more line with 
+New Line"""
+    Q::http_root:"""/home/example\2/"""
+    Q:O:http_root:"""#this is not a comment"""
+    I:O:port:8081
+HOST default:
+HOST foo.bar.com:
+    S::myvariable:/etc/myfriend
