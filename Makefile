@@ -4,8 +4,9 @@ TARGETS=imp3ada
 
 all: $(TARGETS)
 
-imp3ada: Parser.adb
-	$(gnatmake) $(options)  -o imp3ada Parser.adb
+imp3ada: src/Parser.adb
+	$(gnatmake) $(options) -o bin/imp3ada src/Parser.adb
+	-rm *.o *.ali
 
 clean:
-	-rm *.o *.ali $(TARGETS)
+	-rm *.o *.ali bin/$(TARGETS)

@@ -804,7 +804,7 @@ procedure Parser is
    task body Main is
    begin
       -- Open input file
-      FileName := new String'("test.cfg");
+      FileName := new String'("test/test.cfg");
       ReadFile(FileName.All);
       Parse(FileRead);
    end Main;
